@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Поля</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="image.css">
+  <script defer src="panel.js"></script>
+</head>
+<body class="panel">
+  <header class="topbar">
+    <div class="brand"><img src="icons/icon32.png" alt="" width="22" height="22"><span>Поля</span></div>
+    <div class="panel-tabs" role="tablist" aria-label="Разделы «Полей»">
+      <button type="button" role="tab" id="page-tab" aria-selected="true" aria-controls="page-view">Страница</button>
+      <button type="button" role="tab" id="journal-tab" aria-selected="false" aria-controls="journal-view" tabindex="-1">Журнал</button>
+    </div>
+  </header>
+  <main class="panel-content">
+    <section class="panel-view" id="page-view" role="tabpanel" aria-labelledby="page-tab" tabindex="0">
+      <section class="current" aria-labelledby="page-title">
+        <p class="page-domain" id="page-domain" hidden></p>
+        <h1 class="page-title" id="page-title">Текущая страница</h1>
+        <button class="button primary add-page" type="button" id="add-page" hidden><span aria-hidden="true">+</span> Заметка к странице</button>
+      </section>
+      <section aria-labelledby="notes-title" id="notes-section" hidden>
+        <div class="section-header"><h2 id="notes-title">Заметки</h2><span id="notes-count"></span></div>
+        <div id="notes"></div>
+      </section>
+      <p class="empty panel-empty" id="empty">Открываем заметки…</p>
+      <p class="feedback" id="feedback" role="status"></p>
+    </section>
+    <section class="panel-view journal-view" id="journal-view" role="tabpanel" aria-labelledby="journal-tab" hidden>
+      <label class="search">
+        <span class="sr-only">Поиск по заголовку, URL, цитате или комментарию</span>
+        <input type="search" class="field" id="query" placeholder="Поиск по заметкам">
+      </label>
+      <div class="journal-tools">
+        <label class="sort">
+          <span class="sr-only">Порядок сортировки по дате изменения</span>
+          <select class="field" id="sort">
+            <option value="newest">Сначала новые</option>
+            <option value="oldest">Сначала старые</option>
+          </select>
+        </label>
+        <div class="file-actions">
+          <button type="button" class="button secondary" id="import"><span aria-hidden="true">↓</span> Импорт</button>
+          <button type="button" class="button secondary" id="export"><span aria-hidden="true">↑</span> Экспорт</button>
+          <input type="file" id="file" accept=".json,application/json" hidden>
+        </div>
+      </div>
+      <p class="journal-count" id="journal-count" aria-live="polite"></p>
+      <p class="feedback" id="journal-feedback" role="status"></p>
+      <div id="groups"></div>
+      <div class="empty journal-empty" id="journal-empty">
+        <h2 id="empty-title">Открываем журнал…</h2>
+        <p id="empty-description"></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

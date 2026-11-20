@@ -1,0 +1,35 @@
+# Зависимости, сборка и результаты тестов
+/node_modules/
+/dist/
+/coverage/
+/.qa/
+/.polya-verify-*/
+/.npm-cache/
+/.cache/
+/node-compile-cache/
+/playwright-report/
+/test-results/
+*.tsbuildinfo
+*.log
+
+# Локальные настройки и секреты
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Экспорты заметок и архивы расширения
+polya-????-??-??.json
+*.crx
+*.zip
+
+# Редакторы и метаданные ОС
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

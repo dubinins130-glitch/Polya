@@ -1,0 +1,11 @@
+::highlight(polya-fields-notes) {
+  background-color: var(--polya-border);
+  color: var(--polya-text);
+}
+
+::highlight(polya-fields-current),
+::highlight(polya-fields-preview) {
+  background-color: var(--polya-accent);
+  color: var(--polya-bg);
+  text-decoration: underline var(--polya-bg);
+}

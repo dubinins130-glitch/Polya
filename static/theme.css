@@ -1,0 +1,18 @@
+:root, :host {
+  --polya-bg: #0D0F12;
+  --polya-surface: #171A1F;
+  --polya-border: #343941;
+  --polya-text: #F0F2F5;
+  --polya-muted: #9DA5B1;
+  --polya-accent: #E7EBF0;
+  --polya-control-border: color-mix(in srgb, var(--polya-border), var(--polya-muted) 50%);
+  --polya-backdrop: color-mix(in srgb, var(--polya-bg) 78%, transparent);
+  --polya-font: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  --polya-text-size: 14px;
+  --polya-radius: 4px;
+  --polya-radius-tight: 2px;
+  --polya-line: 1px;
+  --polya-control: 32px;
+  --polya-motion: 140ms;
+  --polya-ease: ease-out;
+}
